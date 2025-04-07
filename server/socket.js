@@ -4,7 +4,7 @@ import Channel from "./models/ChannelModel.js";
 const setupSocket = (server) => {
   const io = new SockerIOServer(server, {
     cors: {
-      origin: process.env.ORIGIN,
+      origin: "https://swift-qko3.onrender.com",
       methods: ["GET", "POST"],
       credentials: true,
     },
