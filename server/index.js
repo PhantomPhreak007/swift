@@ -39,6 +39,6 @@ const server = app.listen(port, () => {
 setupSocket(server);
 
 mongoose
-  .connect("mongodb://localhost:27017/syncronus-chat-app")
+  .connect("mongodb+srv://shivanshkaushik1237:jebn3B0cBlg3ep9t@syncronus-chat-app.ndoj5.mongodb.net/?retryWrites=true&w=majority&appName=syncronus-chat-app")
   .then(() => console.log("DB connection Succesful."))
   .catch((err) => console.log(err.message));
