@@ -1,14 +1,15 @@
-import Background from "@/assets/login2.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import Victory from "@/assets/victory.svg";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
 import { toast } from "sonner";
 import { apiClient } from "@/lib/api-client";
 import { LOGIN_ROUTE, SIGNUP_ROUTE } from "@/utils/constants";
 import { useNavigate } from "react-router-dom";
-import { useAppStore } from "@/store";
+import { useAppStore } from "@/store";;
+import React from 'react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+
 const Auth = () => {
   const navigate = useNavigate();
   const { setUserInfo } = useAppStore();
@@ -79,16 +80,40 @@ const Auth = () => {
   };
 
   return (
-    <div className="h-[100vh]  w-[100vw] flex  items-center justify-center ">
-      <div className=" h-[95vh] bg-white border-2 border-white text-opacity-90 shadow-2xl w-[80vw] md:w-[90vw] lg:w-[70vw] xl:w-[60vw] rounded-3xl   grid xl:grid-cols-2  ">
+    <div className="h-[100vh] bg-[url('/background.png')]  w-[100vw] flex  items-center justify-center ">
+      <div className=" h-[95vh] bg-[#1c1d25]  text-opacity-90 shadow-2xl w-[80vw] md:w-[90vw] lg:w-[70vw] xl:w-[60vw] rounded-3xl   grid xl:grid-cols-2  ">
         <div className="flex flex-col gap-10 items-center justify-center ">
           <div className="flex items-center justify-center flex-col ">
-            <div className="flex items-center justify-center ">
-              <h1 className="text-5xl font-bold md:text-6xl ">Welcome</h1>
-              <img src={Victory} alt="Victory Emoji" className="h-[100px] " />
-            </div>
-            <p className="flex items-center justify-center w-full ">
-              Fill in the details to get started with the best chat app!
+          <div className="flex p-5  justify-start items-center gap-2">
+      <svg
+        id="logo-38"
+        width="78"
+        height="32"
+        viewBox="0 0 78 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        {" "}
+        <path
+          d="M55.5 0H77.5L58.5 32H36.5L55.5 0Z"
+          className="ccustom"
+          fill="#8338ec"
+        ></path>{" "}
+        <path
+          d="M35.5 0H51.5L32.5 32H16.5L35.5 0Z"
+          className="ccompli1"
+          fill="#975aed"
+        ></path>{" "}
+        <path
+          d="M19.5 0H31.5L12.5 32H0.5L19.5 0Z"
+          className="ccompli2"
+          fill="#a16ee8"
+        ></path>{" "}
+      </svg>
+      <span className="text-5xl font-bold text-white ">Swift</span>
+    </div>
+            <p className="flex items-center justify-center w-full  text-white">
+            Welcome to Swift. Let's chat!!
             </p>
           </div>
           <div className="flex flex-col items-center justify-center w-full ">
@@ -96,13 +121,13 @@ const Auth = () => {
               <TabsList className=" grid grid-cols-2 bg-transparent rounded-none gap-2 w-full ">
                 <TabsTrigger
                   value="login"
-                  className=" data-[state=active]:bg-transparent text-black text-opacity-90 border-b-2 rounded-none w-full data-[state=active]:text-black data-[state=active]:font-semibold data-[state=active]:border-b-purple-500 p-3 transition-all duration-300  "
+                  className=" data-[state=active]:bg-transparent text-white text-opacity-90 border-b-2 rounded-none w-full data-[state=active]:text-white data-[state=active]:font-semibold data-[state=active]:border-b-purple-500 p-3 transition-all duration-300"
                 >
                   Login
                 </TabsTrigger>
                 <TabsTrigger
                   value="signup"
-                  className="data-[state=active]:bg-transparent text-black text-opacity-90 border-b-2 rounded-none w-full data-[state=active]:text-black data-[state=active]:font-semibold data-[state=active]:border-b-purple-500 p-3 transition-all duration-300"
+                  className="data-[state=active]:bg-transparent text-white text-opacity-90 border-b-2 rounded-none w-full data-[state=active]:text-white data-[state=active]:font-semibold data-[state=active]:border-b-purple-500 p-3 transition-all duration-300"
                 >
                   Signup
                 </TabsTrigger>
@@ -122,7 +147,7 @@ const Auth = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <Button className="rounded-full p-6" onClick={handleLogin}>
+                <Button className="rounded-full p-6 bg-purple-500 " onClick={handleLogin}>
                   Login
                 </Button>
               </TabsContent>
@@ -148,7 +173,7 @@ const Auth = () => {
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                 />
-                <Button className="rounded-full p-6" onClick={handleSignup}>
+                <Button className="rounded-full bg-purple-500 p-6" onClick={handleSignup}>
                   Signup
                 </Button>
               </TabsContent>
@@ -156,7 +181,11 @@ const Auth = () => {
           </div>
         </div>
         <div className="hidden xl:flex justify-center items-center">
-          <img src={Background} alt="background login" className=" h-[500px]" />
+        <DotLottieReact
+      src="https://lottie.host/23a3e843-1dd7-48dd-b113-6cae33e7b35a/8CgzHqrU7s.lottie"
+      loop
+      autoplay
+    />
         </div>
       </div>
     </div>
