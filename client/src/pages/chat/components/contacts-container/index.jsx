@@ -90,7 +90,7 @@ const Logo = () => {
           fill="#a16ee8"
         ></path>{" "}
       </svg>
-      <span className="text-3xl font-semibold ">Swift</span>
+      <span className="text-4xl font-bold font-mono  ">Sw<span className="text-purple-500" >i</span>ft</span>
     </div>
   );
 };
