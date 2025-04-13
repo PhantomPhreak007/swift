@@ -70,10 +70,9 @@ const Profile = () => {
 
   const handleNavigate = () => {
     if (userInfo.profileSetup) {
-    } else {
-      toast.error("Please setup profile.");
+      navigate("/chat");
     }
-  };
+};
 
   const handleFileInputClick = () => {
     fileInputRef.current.click();
@@ -111,17 +110,21 @@ const Profile = () => {
   };
 
   return (
-    <div className="bg-[#1b1c24] h-[100vh] flex item-center justify-center flex-col gap-10 ">
-      <div className="flex flex-col gap-10 w-[80vw] md:w-max ">
-        <div onClick={handleNavigate}>
-          <IoArrowBack className="text-4xl lg:text-6xl text-white/90 cursor-pointer" />
+  <div className="bg-[url('/background.png')] h-[100vh] flex item-center justify-center">
+    <div className="h-[85vh] my-auto bg-[#1c1d25]  text-opacity-90 shadow-2xl w-[80vw] md:w-[90vw] lg:w-[70vw] xl:w-[60vw] rounded-3xl   grid xl:grid-col ">
+      <div className="flex flex-col mx-auto my-auto item-center justify-centergap-10 md:w-max ">
+        <div >
+          <div className="flex items-center justify-center cursor-pointer">
+             <h1 className=" text-white font-bold text-3xl mb-8  " ><span className="text-purple-500" >Pro</span>file Set<span className="text-purple-500" >up</span></h1>
+          </div>
+        
           <div className="grid grid-cols-2">
             <div
-              className="h-full w-32 md:h-48 relative flex items-center justify-center"
+              className="h-full w-auto md:h-48 mx-auto relative flex items-center justify-center"
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
             >
-              <Avatar className="h-32 w-32 md:w-48 md:h-48 rounded-full overflow-hidden">
+              <Avatar className="h-32 w-32 md:w-48 md:h-48 rounded-full overflow-hidden items-center justify-center">
                 {image ? (
                   <AvatarImage
                     src={image}
@@ -142,7 +145,7 @@ const Profile = () => {
               </Avatar>
               {hovered && (
                 <div
-                  className="absolute inset-0 flex items-center justify-center bg-black/50 ring-fuchsia-50 rounded-full cursor-pointer "
+                  className="absolute h-32 w-32 md:w-48 md:h-48  inset-0 flex items-center justify-center bg-black/50 ring-fuchsia-50 rounded-full cursor-pointer "
                   onClick={image ? handleDeleteImage : handleFileInputClick}
                 >
                   {image ? (
@@ -216,6 +219,7 @@ const Profile = () => {
         </div>
       </div>
     </div>
+  </div>  
   );
 };
 
