@@ -6,9 +6,10 @@ import { toast } from "sonner";
 import { apiClient } from "@/lib/api-client";
 import { LOGIN_ROUTE, SIGNUP_ROUTE } from "@/utils/constants";
 import { useNavigate } from "react-router-dom";
-import { useAppStore } from "@/store";;
+import { useAppStore } from "@/store";
 import React from 'react';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { animationDefaultOptions } from "@/lib/utils";
+import Lottie from "react-lottie";
 
 const Auth = () => {
   const navigate = useNavigate();
@@ -181,11 +182,12 @@ const Auth = () => {
           </div>
         </div>
         <div className="hidden xl:flex justify-center items-center">
-        <DotLottieReact
-      src="https://lottie.host/23a3e843-1dd7-48dd-b113-6cae33e7b35a/8CgzHqrU7s.lottie"
-      loop
-      autoplay
-    />
+        <Lottie
+        isClickToPauseDisabled={true}
+        height={400}
+        width={400}
+        options={animationDefaultOptions}
+      />
         </div>
       </div>
     </div>
