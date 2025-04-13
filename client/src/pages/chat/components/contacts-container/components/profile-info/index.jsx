@@ -35,8 +35,8 @@ const ProfileInfo = () => {
   };
 
   return (
-    <div className="absolute bottom-0 h-16 flex items-center justify-between px-10 w-full bg-[#2a2b33]  ">
-      <div className="flex gap-3 items-center  justify-center ">
+    <div className="absolute bottom-0 h-16 flex items-center justify-between px-3 w-full bg-[#2a2b33]  ">
+      <div className="flex gap-3  items-center  justify-center ">
         <div className="w-12 h-12 relative">
           <Avatar className="h-12 w-12 rounded-full overflow-hidden">
             {userInfo.image ? (
@@ -58,18 +58,18 @@ const ProfileInfo = () => {
             )}
           </Avatar>
         </div>
-        <div>
+        <div className="text-bold text-lg" >
           {userInfo.firstName && userInfo.lastName
-            ? `${userInfo.firstName} ${userInfo.lastName}`
+            ? `${userInfo.firstName}`
             : ""}
         </div>
       </div>
-      <div className="flex gap-5">
+      <div className="flex gap-5 bg-purple-500/90 rounded-full p-3 items-center justify-center ">
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger>
               <FiEdit2
-                className="text-purple-500 text-xl font-medium "
+                className="text-white text-xl font-medium "
                 onClick={() => navigate("/profile")}
               />
             </TooltipTrigger>
@@ -82,7 +82,7 @@ const ProfileInfo = () => {
           <Tooltip>
             <TooltipTrigger>
               <IoPowerSharp
-                className="text-red-500 text-xl font-medium "
+                className="text-white text-xl font-medium "
                 onClick={logOut}
               />
             </TooltipTrigger>
