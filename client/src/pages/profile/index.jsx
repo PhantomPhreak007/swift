@@ -110,21 +110,21 @@ const Profile = () => {
   };
 
   return (
-  <div className="bg-[url('/background.png')] h-[100vh] flex item-center justify-center">
-    <div className="h-[85vh] my-auto bg-[#1c1d25]  text-opacity-90 shadow-2xl w-[80vw] md:w-[90vw] lg:w-[70vw] xl:w-[60vw] rounded-3xl   grid xl:grid-col ">
+  <div className="bg-[url('/background.png')] h-[100dvh] flex item-center justify-center">
+    <div className="h-[85dvh] my-auto bg-[#1c1d25]  text-opacity-90 shadow-2xl w-[80dvw] md:w-[90dvw] lg:w-[70dvw] xl:w-[60dvw] rounded-3xl   grid xl:grid-col ">
       <div className="flex flex-col mx-auto my-auto item-center justify-centergap-10 md:w-max ">
-        <div >
+        <div className="h-auto w-auto px-3">
           <div className="flex items-center justify-center cursor-pointer">
-             <h1 className=" text-white font-bold text-3xl mb-8  " ><span className="text-purple-500" >Pro</span>file Set<span className="text-purple-500" >up</span></h1>
+             <h1 className=" text-white font-bold text-3xl mb-8 pt-2 " ><span className="text-purple-500" >Pro</span>file Set<span className="text-purple-500" >up</span></h1>
           </div>
         
-          <div className="grid grid-cols-2">
+          <div className="grid sm:grid-cols-2 grid-cols-1 ">
             <div
               className="h-full w-auto md:h-48 mx-auto relative flex items-center justify-center"
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
             >
-              <Avatar className="h-32 w-32 md:w-48 md:h-48 rounded-full overflow-hidden items-center justify-center">
+              <Avatar className="h-32 w-32 md:w-48 md:h-48  rounded-full overflow-hidden items-center justify-center">
                 {image ? (
                   <AvatarImage
                     src={image}
