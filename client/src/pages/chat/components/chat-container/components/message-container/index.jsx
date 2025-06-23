@@ -269,15 +269,15 @@ const MessageContainer = () => {
   };
 
   return (
-    <div className="flex-1 overflow-y-auto scrollbar-hidden p-4 px-8 md:w-[65vw] lg:w-[70vw] xl:w-[80vw] w-full  ">
+    <div className="flex-1 overflow-y-auto scrollbar-hidden p-4 px-8 md:w-[65dvw] lg:w-[70dvw] xl:w-[80dvw] w-full  ">
       {renderMessages()}
       <div ref={scrollRef} />
       {showImage && (
-        <div className="fixed z-[1000] top-0 left-0 h-[100vh] w-[100vw] flex items-center justify-center backdrop-blur-lg flex-col  ">
+        <div className="fixed z-[1000] top-0 left-0 h-[100dvh] w-[100dvw] flex items-center justify-center backdrop-blur-lg flex-col  ">
           <div>
             <img
               src={`${HOST}/${imageURL}`}
-              className="h-[80vh] w-full bg-cover mt-8 "
+              className="h-[80dvh] w-full bg-cover mt-8 "
             />
           </div>
           <div className="flex gap-5 fixed top-0 mt-4 ">
