@@ -7,6 +7,7 @@ import Profile from "./pages/profile";
 import { useAppStore } from "./store";
 import { apiClient } from "./lib/api-client";
 import { GET_USER_INFO } from "./utils/constants";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const PrivateRoute = ({ children }) => {
   const { userInfo } = useAppStore();
@@ -47,9 +48,15 @@ const App = () => {
       setLoading(false);
     }
   }, [userInfo, setUserInfo]);
-
   if (loading) {
-    return <div>Loading....</div>;
+    return (
+    <div className="flex items-center justify-center h-screen"> 
+      <DotLottieReact
+      src="https://lottie.host/26e247f5-b985-4b5a-93a2-48de036f3cc5/bizAwGQKPb.lottie"
+      loop
+      autoplay
+    />
+    </div>);
   }
   return (
     <BrowserRouter>
