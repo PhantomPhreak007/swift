@@ -33,7 +33,7 @@ const Profile = () => {
       setSelectedColor(userInfo.color);
     }
     if (userInfo.image) {
-      setImage(`${HOST}/${userInfo.image}`);
+      setImage(`https://swift-backend-n1xw.onrender.com/${userInfo.image}`);
     }
   }, [userInfo]);
 
