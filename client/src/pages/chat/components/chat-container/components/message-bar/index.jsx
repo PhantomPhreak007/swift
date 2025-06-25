@@ -108,7 +108,7 @@ const MessageBar = () => {
     <div className="w-full px-4 sm:px-8 mb-6">
   <div className="h-[10dvh] max-h-20 min-h-[60px] w-full bg-[#1c1d25] flex justify-center items-center gap-3 sm:gap-6 rounded-md">
     {/* Input & tools container */}
-    <div className="flex-1 flex bg-[#2a2b33] rounded-md items-center gap-2 sm:gap-5 pr-2 sm:pr-5 overflow-hidden">
+    <div className="flex-1 flex bg-[#2a2b33] rounded-md items-center gap-2 sm:gap-5 pr-2 sm:pr-5 ">
       <input
         type="text"
         className="flex-1 px-3 sm:px-5 py-2 sm:py-3 bg-transparent text-white rounded-md focus:outline-none text-sm sm:text-base"
