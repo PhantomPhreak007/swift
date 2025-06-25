@@ -36,8 +36,11 @@ Modern and responsive UI using ShadCN components, with rich animations via Lotti
 ---
 
 ## 🖼️ Screenshots
-
-> ![screenshot](client/Screenshot.png)
+> ![screenshot](client/Screenshot1.png)
+> ![screenshot](client/Screenshot2.png)
+> ![screenshot](client/Screenshot3.png)
+> ![screenshot](client/Screenshot4.png)
+> ![screenshot](client/Screenshot5.png)
 
 ---
 
